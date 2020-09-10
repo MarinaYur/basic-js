@@ -20,7 +20,7 @@ describe('Transform array', () => {
 
         it.optional('correctly works with an empty array', () => {
             assert.deepStrictEqual((transform([])), []);
-        });
+              });
 
         it.optional('throws an Error if arr is not an Array', () => {
             expect(() => transform(3)).to.throw();
@@ -41,9 +41,11 @@ describe('Transform array', () => {
         it.optional('action flags work properly', () => {
             for(let i = 0; i < 50; i += 1) {
                 const { input, output } = createSample(i);
+                console.log('input', input)
+                console.log('output expected',  output);
+                console.log('transform input',  transform(input));
                 assert.deepStrictEqual(transform(input), output);
             }   
         });
     });
 });
-

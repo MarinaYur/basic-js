@@ -28,7 +28,6 @@ module.exports = function repeater(str, option) {
                 }
                 return result1;
         } else {
-
         for (let i = 1; i < option.repeatTimes; i ++) {
             if (option.addition && option.additionRepeatTimes === 1) {
                 let strWithAddition = '';
@@ -51,52 +50,5 @@ module.exports = function repeater(str, option) {
     } else if (option.addition) {
         return str + option.addition; 
     } 
-    return result;
-    // throw 'Not implemented';
-  
-    // remove line with error and write your code here
+    return result;    
 };
-
-// module.exports = function repeater(str, option) {
-//     let result = str;
-//     let strWithLongAddition = str + option.addition;
-//     let result1 = '';
-//     if (typeof option.repeatTimes !== 'number') {
-//         option.repeatTimes = 1;
-//     }
-//     if (typeof option.additionRepeatTimes !== 'number') {
-//         option.additionRepeatTimes = 1;
-//         }
-//     if (option.repeatTimes > 1) {
-//         if (option.addition && option.additionRepeatTimes > 1) {
-//             for (let j = 1; j < option.additionRepeatTimes; j ++) {
-//                 strWithLongAddition += option.additionSeparator + option.addition;
-//                 }
-//                 result1 = strWithLongAddition;
-//             for (let i = 1; i < option.repeatTimes; i ++) {                
-//                 result1 += option.separator + strWithLongAddition;
-//                 }
-//                 return result1;
-//         } else {
-
-//         for (let i = 1; i < option.repeatTimes; i ++) {
-//             if (option.addition && option.additionRepeatTimes === 1) {
-//                     let strWithAddition = str + option.addition;
-//                     result = strWithAddition + option.separator + strWithAddition + option.separator + strWithAddition;
-//                     strWithAddition = str;                
-//                 } else if (option.separator) {
-//                 result += option.separator + str;
-//             } else {
-//                 result += '+' + str;
-//                 }
-//         }
-//         }
-//     }   
-//     else if (option.addition) {
-//         return str + option.addition; 
-//     } 
-//     return result;
-//     // throw 'Not implemented';
-  
-//     // remove line with error and write your code here
-// };

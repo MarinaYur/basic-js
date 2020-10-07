@@ -1,5 +1,4 @@
 module.exports = function transform(arr) {
-    // let answer = [];
     let arrCopy = [];
     if (!(arr instanceof Array)) {
         throw new Error('Error')};    

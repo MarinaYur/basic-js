@@ -193,7 +193,7 @@ Write your code in `src/extended-repeater.js`.
 
 Cryptography is awesome! Let's try to organize production of encryption machines. Our machines will use one of the encryption methods that are easy to understand, but also not amenable to simple cryptanalysis - the [**Vigenere cipher**](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher).
 
-Our machine will have 2 modifications: **direct** and **reverse** (the type of machine is determined at the moment of creation). The **direct** machine simply encodes and decodes the string that was transmitted to it, and the **reverse** machine returns an **inverted** string after encoding and decoding.
+Our machine will have 2 modifications: **direct** and **reverse** (the type of machine is determined at the moment of creation). The **direct** machine simply encodes and decodes the string that was transmitted to it, and the **reverse** machine returns an **i nverted** string after encoding and decoding.
 
 Your task is to implement the class `VigenereCipheringMachine`. `constructor` of this `class` accepts `true` (**or nothing**) to create **direct** machine and `false` to create **reverse** machine.
 Each instance of `VigenereCipheringMachine` must have 2 methods: `encrypt` and `decrypt`. 
@@ -204,7 +204,7 @@ Each instance of `VigenereCipheringMachine` must have 2 methods: `encrypt` and `
 
 These parameters for both methods are **mandatory**. If at least one of them has not been given, an `Error` must be thrown.
 
-You don't need to validate value sent to `constructor` and to `encrypt` and `decrypt` methods (except throwing an `Error` on absence of argument for these methods).
+ 
 
 Write your code in `src/vigenere-cipher.js`.
 

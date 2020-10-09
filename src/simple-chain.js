@@ -1,23 +1,30 @@
 const chainMaker = {
+  chainArray: [],
   getLength() {
-    throw 'Not implemented';
-    // remove line with error and write your code here
+    return this.chainArray.length;
   },
   addLink(value) {
-    throw 'Not implemented';
-    // remove line with error and write your code here
+    this.chainArray.push(`( ${value} )`);
+  return this;
   },
+
   removeLink(position) {
-    throw 'Not implemented';
-    // remove line with error and write your code here
-  },
+    if (this.chainArray.length < position || (typeof position !== "number")
+      || !Number.isInteger(position) || ((position-1) < 0)) {
+      this.chainArray = [];
+      throw new Error("Error");
+    }
+    this.chainArray.splice(position-1, 1);
+    return this;
+    },
   reverseChain() {
-    throw 'Not implemented';
-    // remove line with error and write your code here
+    this.chainArray.reverse();
+    return this;
   },
   finishChain() {
-    throw 'Not implemented';
-    // remove line with error and write your code here
+    let result = this.chainArray.join("~~");
+    this.chainArray = [];
+    return result;
   }
 };
 
